@@ -2,17 +2,15 @@ import java.util.Scanner;
 
 public class Test {
 
-    public static void parity(int number) {
-        if (number == 0) System.out.println("");
-        else if(number % 2 == 0) System.out.println(" et pair");
-        else System.out.println(" et impair");
+    public static String parity(int number) {
+        if(number % 2 == 0) return "pair";
+        else return "impair";
     }
     
-    public static void positivity(int number) {
-        if(number < 0) System.out.print(number + " est un chiffre négatif");
-        else if (number > 0) System.out.print(number + " est un chiffre positif");
-        else System.out.print(number + " est un chiffre nul");
-        
+    public static String positivity(int number) {
+        if(number < 0) return "négatif";
+        else if (number > 0) return "positif";
+        else return "nul";
     }
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -20,7 +18,9 @@ public class Test {
 
         int number = scan.nextInt();
 
-        positivity(number);
-        parity(number);
+        String positivityResult = positivity(number);
+        String parityResult = parity(number);
+
+        System.out.println(number + " est " + positivityResult + " et " + parityResult);
     }
 }
