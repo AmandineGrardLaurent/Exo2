@@ -5,7 +5,6 @@ Ce projet est un simple programme Java qui permet d'analyser un nombre pour dét
 1. Sa **parité** : pair ou impair  
 2. Sa **positivité** : positif, négatif ou nul  
 
-
 ---
 
 ## Prérequis
@@ -35,6 +34,8 @@ java Test
 java Test 42
 ```
 
+--- 
+
 ## Fonctionnement
 
 Le programme fonctionne de la manière suivante :
@@ -58,7 +59,9 @@ Chiffre à tester :
 java Test 10
 10 est positif et pair
 ```
+
 ---
+
 ## Méthodes principales
 
 - `parity(int number)` : retourne `"pair"` si le nombre est pair, `"impair"` sinon.
