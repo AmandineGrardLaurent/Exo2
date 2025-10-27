@@ -14,10 +14,14 @@ public class Test {
     }
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Chiffre à tester : ");
+        int number = 0;
 
-        int number = scan.nextInt();
-
+        if (args.length > 0) number = Integer.parseInt(args[0]);
+        else {
+            System.out.println("Chiffre à tester : ");
+            number = scan.nextInt();
+        }
+        
         String positivityResult = positivity(number);
         String parityResult = parity(number);
 
