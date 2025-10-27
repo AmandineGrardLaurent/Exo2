@@ -1,22 +1,22 @@
-# Test - Analyse de nombre
+# Test - Analyse de nombre 🔢
 
 Ce projet est un simple programme Java qui permet d'analyser un nombre pour déterminer :
 
-1. Sa **parité** : pair ou impair  
-2. Sa **positivité** : positif, négatif ou nul  
+1. Sa **parité** : pair ou impair ⚖️  
+2. Sa **positivité** : positif, négatif ou nul ➕➖0  
 
 ---
 
-## Prérequis
+## Prérequis 📋
 
-- Java JDK 8 ou supérieur
+- Java JDK 8 ou supérieur 
 - Un terminal ou IDE pour exécuter le programme
 
 ---
 
-## Compilation et exécution
+## Compilation et exécution 🚀
 
-### Depuis le terminal
+### Depuis le terminal 🖱️
 
 1. **Compiler le programme :**
 
@@ -43,7 +43,7 @@ Le programme fonctionne de la manière suivante :
 1. Si aucun argument n’est fourni, il demande à l’utilisateur d’entrer un nombre.
 2. Il détermine si le nombre est **positif**, **négatif** ou **nul** grâce à la méthode `positivity(int)`.
 3. Il détermine si le nombre est **pair** ou **impair** grâce à la méthode `parity(int)`.
-4. Il affiche le résultat dans le terminal.
+4. Il affiche le résultat dans le terminal 💻.
 
 **Exemple sans argument :**
 
