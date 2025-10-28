@@ -31,7 +31,15 @@ public class Test {
         if (args.length > 0) number = Integer.parseInt(args[0]);
         else {
             // Prompt user if no argument and read number from input
-            System.out.println("Chiffre à tester : ");
+            System.out.print("Chiffre à tester : ");
+
+            // Keep asking until the user enters a valid integer
+            while (!scan.hasNextInt()) {
+                System.out.println("Veuillez entrer un nombre entier.");
+                System.out.print("Chiffre à tester : ");
+                // Discard invalid user input
+                scan.next();
+            }
             number = scan.nextInt();
         }
         
@@ -41,5 +49,7 @@ public class Test {
 
         // Print the results
         System.out.println(number + " est " + positivityResult + " et " + parityResult);
+
+        scan.close();
     }
 }
