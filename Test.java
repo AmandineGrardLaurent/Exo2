@@ -28,7 +28,19 @@ public class Test {
         int number = 0;
 
         // Check if a command-line argument was provided
-        if (args.length > 0) number = Integer.parseInt(args[0]);
+        if (args.length > 0) {
+            Scanner scanner = new Scanner(args[0]);
+            if (scanner.hasNextInt() && (args.length == 1))  {
+                number = Integer.parseInt(args[0]); 
+            }
+            else {
+                System.out.println((args.length == 1) ? "L'argument n'est pas un entier !" : "Saisir un seul argument");
+                scanner.close();
+                System.exit(1);
+            }
+            scanner.close();
+        }
+        
         else {
             // Prompt user if no argument and read number from input
             System.out.print("Chiffre à tester : ");
@@ -41,6 +53,7 @@ public class Test {
                 scan.next();
             }
             number = scan.nextInt();
+            scan.close();
         }
         
         // Get the positivity and parity of the number
